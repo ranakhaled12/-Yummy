@@ -1,0 +1,330 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.537),rgba(0, 0, 0, 0.537)), url(../imgs/pexels-jonathan-borba-2983101.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.open_sidebar
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    margin-left: 10px;
+    font-size: 1.5rem;
+    color: white;
+     cursor: pointer;
+}
+.open_sidebar span
+{
+    letter-spacing: 1px;
+}
+aside
+{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    left: -200px;
+    background: black;
+    backdrop-filter: blur(15px);
+    z-index: 9999;
+    transition: 1s;
+}
+.l0
+{
+    left: 0;
+    transition: 1s;
+}
+aside .list
+{
+ position: relative;
+ overflow: hidden;
+}
+aside ul
+{
+    list-style: none;
+    margin-top: 20px;
+    top: 300px;
+    position: relative;
+    transition: .5s;
+}
+.t0
+{
+    top: 0;
+    transition: .5s;
+}
+aside ul li
+{
+    padding: 20px 30px 20px 20px;
+    /* margin: 30px 10px; */
+    color: #CCC;
+    display: none;
+    position: relative;
+   cursor: pointer;
+}
+.control
+{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: -70px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.control h1
+{
+    margin:50px 0;
+}
+.bars
+{
+    cursor: pointer;
+}
+.bars div
+{
+   width: 30px;
+   height: 3px;
+   background-color: white;
+   margin-top: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 20px;
+   /* transition: .1s; */
+}
+.close
+{
+    transform: rotate(90deg);
+}
+.close div:nth-child(1)
+{
+    transform:rotate(-45deg)
+              translateX(-6px)
+}
+.close div:nth-child(2)
+{
+    transform:rotate(45deg)
+    translateX(-6px)
+}
+.close div:nth-child(3)
+{
+    display: none;
+}
+.close div:nth-child(4)
+{
+    display: none;
+}
+.share i
+{
+ cursor: pointer;
+}
+/* ********************* */
+#dataShow
+{
+    padding: 0 50px;
+    margin: auto;
+    background: transparent;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+article
+{
+    cursor: pointer;
+}
+.categor
+{
+   background-image: linear-gradient(rgba(0, 0, 0, 0.537),rgba(0, 0, 0, 0.537));
+   height: 100%;
+   width: 100%;
+   bottom: -100%;
+   transition: .5s;
+   
+}
+article:hover .categor
+{
+    bottom: 0px;
+}
+/* ***************************** */
+
+.details
+{
+    margin-top: 50px;
+    padding: 10px 0;
+    color: white;
+}
+.recipes div
+{
+ letter-spacing: 2px;
+ margin: 5px;
+}
+
+/* *****loading******* */
+
+
+.loading
+{
+  z-index: 9999;
+}
+.main{
+    width:330px;
+    height:330px;
+    border:0px solid #e51919;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    margin:auto;
+    border-radius:50%; 
+  }
+  
+  .circle{
+    width:150px;
+    height:150px;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle 10s linear infinite;
+    background-image: url("");
+    background-size: contain;  
+    background-repeat: no-repeat;
+}
+  .circle2{
+    width:150px;
+    height:150px;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle2 10s linear infinite;
+    background-image: url("");
+    background-size: contain;  
+    background-repeat: no-repeat; 
+  }
+  .circle3{
+    width:150px;
+    height:150px;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle3 10s linear infinite;
+    background-image: url("");
+    background-size: contain;  
+    background-repeat: no-repeat; 
+  }
+  .circle4{
+    width:150px;
+    height:150px;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle4 10s linear infinite;
+    background-image: url("");
+    background-size: contain;  
+    background-repeat: no-repeat; 
+  }
+  .circle_center
+  {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    position:absolute;
+    top:50%; left:50%;;
+    transform: translate(-50%, -50%);
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @keyframes circle{
+    0%{
+      transform:rotate(0deg)
+                translate(-165px)
+                rotate(0deg);
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-165px)
+                rotate(-360deg);
+    }
+  }
+  
+  @keyframes circle2{
+    0%{
+      transform:rotate(0deg)
+                translate(165px)
+                rotate(0deg);
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(165px)
+                rotate(-360deg);
+    }
+  }
+  
+  @keyframes circle3{
+    0%{
+      transform:rotate(0deg)
+                translateY(165px)
+                rotate(0deg);
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translateY(165px)
+                rotate(-360deg);
+    }
+  }
+  
+  @keyframes circle4{
+    0%{
+      transform:rotate(0deg)
+                translateY(-165px)
+                rotate(0deg);
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translateY(-165px)
+                rotate(-360deg);
+    }
+  }
+  .loading
+  {
+    background-color: #080809;
+  }
+  .load span {
+    color: #212529;
+    animation-name: load;
+    animation-duration: .9s;
+    animation-iteration-count: infinite;
+  }
+  .load .two
+  {
+    animation-delay: .3s;
+  }
+  .load .three
+  {
+      animation-delay: .6s;
+  }
+  @keyframes load
+  {
+      to
+      {
+        opacity: 0.2;
+      }
+  }

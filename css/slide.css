@@ -1,0 +1,28 @@
+/* slideUp */
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0); }
+  100% {
+    -webkit-transform: none; } }
+@-moz-keyframes slideUp {
+  0% {
+    -moz-transform: translate3d(0, 100%, 0); }
+  100% {
+    -moz-transform: none; } }
+@-o-keyframes slideUp {
+  0% {
+    -o-transform: translate3d(0, 100%, 0); }
+  100% {
+    -o-transform: none; } }
+@keyframes slideUp {
+  0% {
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    transform: none; } }
+
+.u--slideUp {
+  -webkit-animation: slideUp 1s;
+  -moz-animation: slideUp 1s;
+  -o-animation: slideUp 1s;
+  animation: slideUp 1s; }
+
